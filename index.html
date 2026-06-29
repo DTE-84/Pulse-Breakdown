@@ -41,7 +41,7 @@
 			rel="preload"
 			as="image"
 			href="https://dte-solutions.icu/assets/pulse/Pulse-MeetNova.png" />
-		<script src="https://unpkg.com/lucide@latest" defer></script>
+		<script src="https://unpkg.com/lucide@latest"></script>
 		<style>
 			:root {
 				--bg: #080a0c;
@@ -2155,10 +2155,12 @@
 		</footer>
 
 		<script>
-			lucide.createIcons();
-            document.addEventListener("DOMContentLoaded", function() {
-  lucide.createIcons();
-});
+			document.addEventListener("DOMContentLoaded", function () {
+				if (typeof lucide !== "undefined") lucide.createIcons();
+			});
+			if (document.readyState !== "loading" && typeof lucide !== "undefined") {
+				lucide.createIcons();
+			}
 
 			// Mobile nav toggle
 			function toggleMobileNav() {
