@@ -217,6 +217,66 @@
 				color: var(--green);
 			}
 
+			/* Mobile-only Launch App — sits between logo and hamburger */
+			.nav-mobile-cta {
+				display: none;
+				align-items: center;
+				gap: 8px;
+				margin-left: auto;
+				margin-right: 12px;
+			}
+			.nav-mobile-cta a {
+				font-size: 11px;
+				font-weight: 800;
+				text-decoration: none;
+				text-transform: uppercase;
+				letter-spacing: 0.06em;
+				padding: 7px 14px;
+				border-radius: 7px;
+				background: var(--green);
+				color: #000 !important;
+				transition: opacity 0.2s, box-shadow 0.2s;
+			}
+			.nav-mobile-cta a:hover {
+				opacity: 0.9;
+				box-shadow: 0 0 16px var(--green-glow);
+			}
+
+			/* Hero CTA row */
+			.hero-cta-row {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 12px;
+				margin-top: 28px;
+			}
+			.hero-cta-row a {
+				font-size: 13px;
+				font-weight: 800;
+				text-decoration: none;
+				text-transform: uppercase;
+				letter-spacing: 0.06em;
+				padding: 14px 28px;
+				border-radius: 10px;
+				transition: opacity 0.2s, box-shadow 0.2s, background 0.2s;
+			}
+			.hero-cta-row .btn-launch {
+				background: var(--green);
+				color: #000 !important;
+			}
+			.hero-cta-row .btn-launch:hover {
+				opacity: 0.9;
+				box-shadow: 0 0 24px var(--green-glow);
+			}
+			.hero-cta-row .btn-ghost {
+				background: transparent;
+				color: rgba(255,255,255,0.7) !important;
+				border: 1px solid var(--border-mid);
+			}
+			.hero-cta-row .btn-ghost:hover {
+				background: rgba(255,255,255,0.04);
+				border-color: var(--border-hot);
+			}
+
 			/* Ã¢â€â‚¬Ã¢â€â‚¬ HERO Ã¢â€â‚¬Ã¢â€â‚¬ */
 			header {
 				padding: 140px 48px 80px;
@@ -1157,6 +1217,9 @@
 				.nav-mobile-toggle {
 					display: block;
 				}
+				.nav-mobile-cta {
+					display: flex;
+				}
 				header {
 					padding: 120px 20px 60px;
 				}
@@ -1232,6 +1295,9 @@
 				>
 			</div>
 
+			<div class="nav-mobile-cta">
+				<a href="https://pulse-blond-three.vercel.app/" target="_blank">Launch App</a>
+			</div>
 			<button
 				class="nav-mobile-toggle"
 				id="mob-toggle"
@@ -1253,6 +1319,11 @@
 				<div>
 					<div class="hero-eyebrow">Behavioral Finance Engine</div>
 					<h1>Pulse<br /><em>AI</em></h1>
+					<div class="hero-cta-row">
+						<a href="https://pulse-blond-three.vercel.app/" target="_blank" class="btn-launch">Launch App</a>
+						<a href="https://pulse-blond-three.vercel.app/auth?guest=true" target="_blank" class="btn-ghost">Live Demo</a>
+					</div>
+
 					<div class="hero-meta-strip">
 						<div class="meta-item">
 							<span class="meta-label">Category</span>
